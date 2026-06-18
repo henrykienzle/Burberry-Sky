@@ -33,36 +33,39 @@ h3,
 ========================= */
 
 .navbar {
-    background: white;
-    height: 55px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 0 50px;
-    border-bottom: 1px solid #ececec;
+  background: white;
+  height: 58px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #ececec;
 }
 
 .nav-left {
     display: flex;
     gap: 25px;
+    justify-self: start;
 }
 
 .nav-left a {
-    text-decoration: none;
-    color: #111;
-    font-size: 12px;
+  text-decoration: none;
+  color: #111;
+  font-size: 12px;
 }
 
 .logo {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+    justify-self: center;
 }
 
 .nav-icons {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+    justify-self: end;
 }
 
 /* =========================
@@ -546,69 +549,134 @@ footer p {
    MOBILE
 ========================= */
 
-@media (max-width: 700px) {
+/* TABLET */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 25px;
+  }
 
-    .navbar {
-        grid-template-columns: 1fr;
-        height: auto;
-        gap: 15px;
-        padding: 20px;
-    }
+  .machine-grid,
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .nav-left {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+  .technical-layout,
+  .suite-section {
+    grid-template-columns: 1fr;
+  }
 
-    .nav-icons {
-        justify-content: center;
-    }
+  .special-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .machine-grid {
-        grid-template-columns: 1fr;
-    }
+  .intro,
+  .special,
+  .suite-section,
+  .destinations-new,
+  .technical-new {
+    padding: 90px 40px;
+  }
 
-    .destination-grid {
-        grid-template-columns: 1fr;
-    }
+  .hero {
+    height: 650px;
+  }
+}
 
-    .spec-grid {
-        grid-template-columns: 1fr;
-    }
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    padding: 0 18px;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    footer {
-        grid-template-columns: 1fr;
-    }
+  .nav-left {
+    display: none;
+  }
 
-    .intro,
-    .special,
-    .suite-section,
-    .destinations-new,
-    .technical-new {
-        padding: 80px 25px;
-    }
+  .logo {
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+  }
 
-    .hero {
-        height: 6000px;
-    }
+  .nav-icons {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .hero-text h1 {
-        font-size: 28px;
-    }
+  .nav-icons span:first-child {
+    order: 2;
+    font-size: 22px;
+  }
 
-    .destinations-new h2 {
-        font-size: 28px;
-    }
+  .nav-icons span:last-child {
+    order: 1;
+    font-size: 24px;
+  }
 
-    .technical-new h2 {
-        font-size: 28px;
-    }
+  .hero {
+    margin-top: 58px;
+    height: calc(100vh - 58px);
+  }
 
-    .technical-info h3 {
-        font-size: 22px;
-    }
+  .hero-text {
+    width: 90%;
+  }
 
-    .technical-image img {
-        height: 280px;
-    }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  .machine-grid,
+  .destination-grid,
+  .spec-grid,
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  .intro,
+  .special,
+  .suite-section,
+  .destinations-new,
+  .technical-new {
+    padding: 70px 24px;
+  }
+
+  .technical-image img,
+  .suite-section img,
+  .machine-card img,
+  .destination-card img,
+  .special-card img {
+    height: auto;
+  }
+
+  footer {
+    text-align: center;
+    padding: 50px 25px;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    width: 100%;
+  }
 }
