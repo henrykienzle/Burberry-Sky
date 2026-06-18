@@ -1,0 +1,614 @@
+/* =========================
+   RESET
+========================= */
+
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f8f8;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    background: white;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 50px;
+    border-bottom: 1px solid #ececec;
+}
+
+.nav-left {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: #111;
+    font-size: 12px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+    text-align: center;
+
+    text-shadow: 0 3px 12px rgba(0,0,0,0.8);
+}
+
+.hero-text p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    font-size: 44px;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    background: #0b78ff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 13px;
+}
+
+.btn.small {
+    padding: 10px 24px;
+    font-size: 12px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    background: white;
+    text-align: center;
+    padding: 120px 100px;
+}
+
+.intro h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.intro > p {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* =========================
+   MASCHINEN
+========================= */
+
+.machine-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.machine-card {
+    text-align: center;
+}
+
+.machine-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.machine-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.machine-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =========================
+   REISEZIELE NEU
+========================= */
+
+.destinations-new {
+    position: relative;
+
+    background-image: url("images/bildziele.png");
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+
+    padding: 160px 100px;
+
+    color: white;
+}
+.destinations-new::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+}
+
+.destinations-new h2,
+.destinations-new .subtitle,
+.destination-grid,
+.destinations-new .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.destinations-new h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.destinations-new > p {
+    max-width: 700px;
+    margin: 0 auto 45px auto;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.destination-card {
+    position: relative;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.destination-card h3 {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 45px;
+
+    color: white;
+
+    font-size: 15px;
+
+    z-index: 3;
+}
+.destination-card p {
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    color: white;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    z-index: 3;
+}
+.destination-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.15),
+        transparent
+    );
+
+    z-index: 2;
+}
+
+/* =========================
+   TECHNIK NEU
+========================= */
+
+.technical-new {
+    background: white;
+    padding: 130px 100px;
+    text-align: center;
+}
+
+.technical-new h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.technical-new > p {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+.technical-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.technical-info {
+    text-align: left;
+}
+
+.technical-info h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.spec-item {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.spec-item span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.spec-item h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+
+.technical-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+/* =========================
+   SUITE SECTION
+========================= */
+
+.suite-section {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    padding: 130px 100px;
+    align-items: center;
+}
+
+.suite-text h2 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.suite-text p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.suite-section img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+/* =========================
+   SPECIAL SECTION
+========================= */
+
+.special {
+    background: white;
+    text-align: center;
+    padding: 120px 100px;
+}
+
+.special h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.special > p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.special-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.special-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.special-card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.special-card p {
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #efefef;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 60px 80px;
+}
+
+footer h3,
+footer h4 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.newsletter {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 220px;
+    border: 1px solid #ccc;
+}
+
+.newsletter button {
+    border: none;
+    background: #0b78ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+    background: #efefef;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .machine-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technical-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .special-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .suite-section {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-left {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-icons {
+        justify-content: center;
+    }
+
+    .machine-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .intro,
+    .special,
+    .suite-section,
+    .destinations-new,
+    .technical-new {
+        padding: 80px 25px;
+    }
+
+    .hero {
+        height: 6000px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .destinations-new h2 {
+        font-size: 28px;
+    }
+
+    .technical-new h2 {
+        font-size: 28px;
+    }
+
+    .technical-info h3 {
+        font-size: 22px;
+    }
+
+    .technical-image img {
+        height: 280px;
+    }
+}
